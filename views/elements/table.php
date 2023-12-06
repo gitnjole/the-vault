@@ -54,7 +54,7 @@
             $artistLookup = [
               'Antoine Cami' => 'bg-amber-200 text-gray-900',
               'Bobzz' => 'bg-emerald-300 text-gray-900',
-              'Bezinho' => 'bg-purple-600 text-gray-900',
+              'Bezinho' => 'bg-purple-600 text-gray-200',
             ];
 
             $stylingClass = 'class="text-sm text-center px-6 py-4 whitespace-normal"';

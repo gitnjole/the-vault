@@ -6,6 +6,6 @@
     <link rel="stylesheet" href="views/elements/css/fixes.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 </head>
-<body class="h-full">
+<body class="h-full" style="background-image: url('views/images/bg_fond.gif');">
 
 <div class="min-h-full">
