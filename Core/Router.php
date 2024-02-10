@@ -8,39 +8,39 @@ class Router
 
     public function addRoute(string $uri, string $controller, string $method)
     {
-        $this->routes = [
+        $this->routes[] = [
             'uri' => $uri,
             'controller' => $controller,
             'method' => $method
         ];
     }
 
-    public function get(string $uri, string $controller): void
+    public function get(string $uri, string $controller)
     {
         $this->addRoute($uri, $controller, 'GET');
     }
 
-    public function post(string $uri, string $controller): void
+    public function post(string $uri, string $controller)
     {
         $this->addRoute($uri, $controller, 'POST');
     }
 
-    public function put(string $uri, string $controller): void
+    public function put(string $uri, string $controller)
     {
         $this->addRoute($uri, $controller, 'PUT');
     }
 
-    public function delete(string $uri, string $controller): void
+    public function delete(string $uri, string $controller)
     {
         $this->addRoute($uri, $controller, 'DELETE');
     }
 
-    public function patch(string $uri, string $controller): void
+    public function patch(string $uri, string $controller)
     {
         $this->addRoute($uri, $controller, 'PATCH');
     }
 
-    public function route(string $uri, string $method)
+    public function route($uri, $method)
     {
         foreach ($this->routes as $route) {
             if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
