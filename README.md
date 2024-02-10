@@ -2,7 +2,7 @@
 
 "The Vault" is a PHP-based website dedicated to preserving information about music samples, focusing on my own music. The project is crafted with pure PHP for the server back-end, complemented by the front-end components of Tailwind CSS.
 
-![Alt text](views/images/splash.png "Main table design")
+![Alt text](web/images/splash.png "Main table design")
 
 **Key Features:**
 
