@@ -4,23 +4,38 @@ namespace Core;
 
 use PDO;
 
-class Database 
+class Database
 {
-    private $connection;
-    public function __construct($config, $user)
-    {
-        $dsn = 'mysql:'. http_build_query($config, '', ';');
+    private $connection = null;
+    private $statement = null;
 
-        $this->connection = new PDO($dsn, $user['username'], $user['password'], [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ]);
+    public function __construct(
+        private array $config = []
+    ) {
+        $this->connection = new PDO(
+            $config['DSN'],
+            $config['DB_USER'],
+            $config['DB_PASS'],
+            $config['DB_PARAMS'],
+        );
     }
 
-    public function query($query, $params = [])
+    public function query(string $query, array $params = [])
     {
-        $statement = $this->connection->prepare($query);
-        $statement->execute($params);
+        $this->statement = $this->connection->prepare($query);
+        if (!empty($values)) {
+            foreach ($values as $key => $value) {
+                $this->statement->bindValue($key, $value);
+            }
+        }
+        $this->statement->execute($params);
 
-        return $statement;
+        return $this;
+    }
+
+    public function findAll()
+    {
+        return $this->statement->fetchAll();
     }
 }
+
