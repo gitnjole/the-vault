@@ -33,6 +33,11 @@ class Database
         return $this;
     }
 
+    public function find()
+    {
+        return $this->statement->fetch();
+    }
+
     public function findAll()
     {
         return $this->statement->fetchAll();

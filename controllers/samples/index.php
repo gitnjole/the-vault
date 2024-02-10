@@ -1,15 +1,14 @@
 <?php
 
-$config = require 'config.php';
-$db = new Database($config['database'], $config['user']);
+use Core\Database;
 
+$heading = 'Welcome to The Vault.';
 
-$query = "SELECT * FROM samples";
-$samples = $db->query($query)->fetchAll();
+$config = require base_path('config.php');
+$db = new Database($config['database']);
 
-$bgClasscounter = 0;
+$samples = $db->query(
+    "SELECT * FROM vault"
+)->findAll();
 
-$heading = 'All samples';
-require base_path('views/samples/index.view.php');
-
-
+require base_path('views/samples/samples.view.php');
