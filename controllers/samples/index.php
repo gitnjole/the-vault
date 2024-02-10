@@ -10,6 +10,6 @@ $samples = $db->query($query)->fetchAll();
 $bgClasscounter = 0;
 
 $heading = 'All samples';
-require 'views/samples/samples.view.php';
+require base_path('views/samples/index.view.php');
 
 

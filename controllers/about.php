@@ -1,4 +1,4 @@
 <?php
 
 $heading = 'What is The Vault?';
-require 'views/about.view.php';
+require base_path('views/index.view.php');

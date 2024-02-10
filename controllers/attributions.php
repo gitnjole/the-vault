@@ -1,4 +1,4 @@
 <?php
 
 $heading = 'Attributions for this project';
-require 'views/attributions.view.php';
+require base_path('views/attributions.view.php');
