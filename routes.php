@@ -12,3 +12,4 @@ $router->get('/attributions', 'controllers/attributions.php');
  * Sample pages
  */
 $router->get('/samples', 'controllers/samples/index.php');
+$router->get('/sample', 'controllers/samples/show.php');
