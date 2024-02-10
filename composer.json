@@ -1,0 +1,16 @@
+{
+    "name": "njole/the-vault",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "./Core"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antonio Cahun",
+            "email": "cahunantonio1@gmail.com"
+        }
+    ],
+    "require": {}
+}
