@@ -1,8 +1,8 @@
 <?php
 
-require 'views/elements/head.php';
-require 'views/elements/nav.php';
-require 'views/elements/banner.php';
+require base_path('views/elements/head.php');
+require base_path('views/elements/nav.php');
+require base_path('views/elements/banner.php');
 
 ?>
 <main>
@@ -13,4 +13,4 @@ require 'views/elements/banner.php';
 </div>
 </main>
 
-<?php require 'views/elements/footer.php'; ?>
+<?php require base_path('views/elements/footer.php'); ?>
