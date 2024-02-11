@@ -1,6 +1,23 @@
 <?php
 
 /**
+ * POST Route:
+ * Handles the creation of a new resource.
+ * 
+ * GET Route:
+ * Retrieves an existing resource or a collection of resources.
+ * 
+ * PUT Route:
+ * Updates an existing resource entirely.
+ * 
+ * PATCH Route:
+ * Modifies an existing resource partially.
+ *
+ * DELETE Route:
+ * Deletes an existing resource. 
+ */
+
+/**
  * Navigation pages
  */
 $router->get('/', 'controllers/index.php');
