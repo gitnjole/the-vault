@@ -13,9 +13,16 @@
 **Technology Stack:**
 
 - **Back-end:** PHP
-- **Front-end:** HTML, Tailwind UI
+- **Front-end:** HTML, Tailwind CSS
 - **Database:** MariaDB
 
-**Feature Wishlist:**
+**On user accessibility**
+    In its current implementation, this is a static website that doesn't allow for registration of new users or adding of samples outside of administratie accounts. 
+    This was done on purpose as the goal of this project is to achieve a web application that interacts with an archive and isn't meant to be taken as a forum where
+    users can submit any content. If you are viewing this project as a **recruiter**, please look into my **other projects** where I showcase my ability to implement
+    such capabilites. Otherwise, please respect the design choice and if you want to implement your own version of this project open for public admission, my code is
+    already capable of handling such functionality, it just needs to be written.
+
+**Further Ideas**
 
 - To be added.
