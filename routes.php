@@ -13,3 +13,9 @@ $router->get('/attributions', 'controllers/attributions.php');
  */
 $router->get('/samples', 'controllers/samples/index.php');
 $router->get('/sample', 'controllers/samples/show.php');
+
+/**
+ * Login
+ */
+$router->get('/login', 'controllers/login/show.php');
+$router->post('/login', 'controllers/login/login.php');
