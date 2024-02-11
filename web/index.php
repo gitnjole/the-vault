@@ -14,6 +14,8 @@ if (isset($config['unpack'])) {
     }
 }
 
+require base_path("service.php");
+
 $router = new Router();
 
 $routes = require base_path('routes.php');

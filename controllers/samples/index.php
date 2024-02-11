@@ -1,11 +1,11 @@
 <?php
 
 use Core\Database;
+use Core\Application;
 
 $heading = 'Welcome to The Vault.';
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = Application::resolve(Database::class);
 
 $samples = $db->query(
     "SELECT * FROM vault"
