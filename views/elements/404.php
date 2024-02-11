@@ -11,7 +11,7 @@ require base_path('views/elements/nav.php');
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <p> Page not found, you searched for: <?= $_SERVER['REQUEST_URI']; ?></p>
-      <p> <a href="/">Go back to home</a></p>
+      <p> <a href="/">Go back</a></p>
     </div>
   </main>
 
