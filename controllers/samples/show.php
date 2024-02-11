@@ -1,11 +1,9 @@
 <?php
 
 use Core\Database;
-use Core\Response;
+use Core\Application;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
-
+$db = Application::resolve(Database::class);
 
 $sample = $db->query(
     "SELECT * FROM vault WHERE id = :id",
