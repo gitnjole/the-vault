@@ -1,5 +1,7 @@
 <?php
 
+use Core\Response;
+
 function abort($code = 404)
 {
     http_response_code($code);
@@ -7,6 +9,13 @@ function abort($code = 404)
     require base_path("views/elements/{$code}.php");
 
     die();
+}
+
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if (! $condition) {
+        abort($status);
+    }
 }
 
 function base_path(string $path): string
