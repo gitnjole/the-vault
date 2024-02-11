@@ -12,11 +12,8 @@ $sample = $db->query(
     [
         'id' => $_GET['id']
     ]
-)->find();
+)->findOrFail();
 
-if (! $sample) {
-    abort(404);
-}
 
 $user_id = 1;
 if ($sample['user_id'] !== $user_id) {
