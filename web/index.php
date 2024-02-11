@@ -5,7 +5,7 @@ use Core\Router;
 const BASE_PATH = __DIR__ ."/../";
 
 require BASE_PATH. 'Core/functions.php';
-require_once BASE_PATH. 'vendor/autoload.php';
+require_once base_path('vendor/autoload.php');
 
 $config = require base_path('config.php');
 if (isset($config['unpack'])) {
