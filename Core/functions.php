@@ -23,7 +23,7 @@ function base_path(string $path): string
     return BASE_PATH . $path;
 }
 
-function urlIs(string $value)
+function urlIs(string $value): bool
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
