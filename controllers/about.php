@@ -1,4 +1,5 @@
 <?php
 
-$heading = 'What is The Vault?';
-require base_path('views/index.view.php');
+view('about.view.php', [
+    'heading' => 'What is The Vault?'
+]);

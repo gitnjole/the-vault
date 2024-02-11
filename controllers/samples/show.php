@@ -16,5 +16,7 @@ $sample = $db->query(
 $user_id = 1;
 authorize($sample['user_id'] === $user_id);
 
-$heading = $sample['song_name'];
-require base_path('views/samples/show.view.php');
+require view('samples/show.view.php', [
+    'heading' => $sample['song_name'],
+    'sample' => $sample
+]);

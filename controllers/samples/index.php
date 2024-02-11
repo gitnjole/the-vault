@@ -11,4 +11,7 @@ $samples = $db->query(
     "SELECT * FROM vault"
 )->all();
 
-require base_path('views/samples/samples.view.php');
+require view('samples/samples.view.php', [
+    'heading' => 'All samples',
+    'samples' => $samples
+]);
