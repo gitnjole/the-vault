@@ -16,9 +16,7 @@ $sample = $db->query(
 
 
 $user_id = 1;
-if ($sample['user_id'] !== $user_id) {
-    abort(Response::FORBIDDEN);
-}
+authorize($sample['user_id'] === $user_id);
 
 $heading = $sample['song_name'];
 require base_path('views/samples/show.view.php');

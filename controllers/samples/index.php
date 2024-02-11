@@ -9,6 +9,6 @@ $db = new Database($config['database']);
 
 $samples = $db->query(
     "SELECT * FROM vault"
-)->findAll();
+)->all();
 
 require base_path('views/samples/samples.view.php');

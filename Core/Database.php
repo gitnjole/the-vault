@@ -33,19 +33,19 @@ class Database
         return $this;
     }
 
-    public function find()
+    public function one()
     {
         return $this->statement->fetch();
     }
 
-    public function findAll()
+    public function all()
     {
         return $this->statement->fetchAll();
     }
     
     public function findOrFail()
     {
-        $result = $this->find();
+        $result = $this->one();
 
         if (! $result) {
             abort(404);
