@@ -2,13 +2,14 @@
 
 namespace Http\Forms;
 
+use Core\ValidationException;
 use Core\Validator;
 
 class LoginForm
 {
     private $errors = [];
 
-    public function validate(array $credentials)
+    public function __construct(public array $credentials)
     {
         foreach ($credentials as $fieldName => $fieldValue) {       
             if (Validator::isEmpty($fieldValue)) {
@@ -25,13 +26,30 @@ class LoginForm
                 );
             }
         }
+    }
 
-        return empty($this->errors);
+    public static function validate(array $credentials)
+    {
+        $instance = new static($credentials);
+
+        return $instance->failed() ? $instance->throwException() : $instance;
+    }
+
+    public function throwException()
+    {
+        ValidationException::throw($this->getErrors(), $this->credentials);
+    }
+
+    public function failed()
+    {
+        return count($this->errors);
     }
 
     public function addError($field, $message)
     {
         $this->errors[$field] = $message;
+
+        return $this;
     }
 
     public function getErrors()
