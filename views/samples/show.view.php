@@ -16,6 +16,11 @@ require base_path('views/elements/banner.php');
     <p>
       <?= $sample['artist']. '<br>' .$sample['sample']. '<br>' .$sample['stamp'] ?>
     </p>
+
+    <p>
+      <a class="font-semibold leading-6 text-grey-600 hover:text-indigo-500"
+         href="/sample/edit?id=<?= $sample['id'] ?>"> Edit this sample</a>
+    </p>
   </section>
 </div>
 </main>
