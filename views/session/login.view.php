@@ -1,15 +1,9 @@
-<?php
-
-require base_path('views/elements/head.php');
-require base_path('views/elements/nav.php');
-require base_path('views/elements/banner.php');
-
-?>
+<?php require base_path('views/elements/head.php'); ?>
 
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <img class="" src="images/inferno.jpg" alt="Inferno Productions logo">
-    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Register your account</h2>
+    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Login to your account</h2>
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
