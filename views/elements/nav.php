@@ -24,7 +24,7 @@
                 <?php if ($_SESSION['name'] ?? false) :?>
                   <a href="/profile" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"><?= $_SESSION['name'] ?></a>
                 <?php else :?>
-                  <a href="/users" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Sign up!</a>
+                  <a href="/login" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Log in</a>
                 <?php endif; ?>
               </div>
 
