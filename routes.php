@@ -35,5 +35,5 @@ $router->patch('/sample', 'controllers/samples/update.php');
 /**
  * Login
  */
-$router->get('/login', 'controllers/login/show.php');
+$router->get('/login', 'controllers/login/login.php');
 $router->post('/login', 'controllers/login/login.php');
