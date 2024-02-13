@@ -30,10 +30,10 @@ $router->get('/attributions', 'controllers/attributions.php');
  */
 $router->get('/samples', 'controllers/samples/index.php');
 $router->get('/sample', 'controllers/samples/show.php');
-$router->get('/sample/edit', 'controllers/samples/edit.php');
+$router->get('/sample/edit', 'controllers/samples/edit.php')->access('auth');
 $router->patch('/sample', 'controllers/samples/update.php');
 /**
  * Login
  */
-$router->get('/login', 'controllers/login/login.php');
-$router->post('/login', 'controllers/login/login.php');
+$router->get('/login', 'controllers/login/login.php')->access('guest');
+$router->post('/login', 'controllers/login/login.php')->access('guest');
