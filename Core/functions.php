@@ -49,6 +49,12 @@ function view(string $path,$attributes = [])
     require base_path('views/' .$path. '.view.php');
 }
 
+function redirect($path)
+{
+    header("location: {$path}");
+    die();
+}
+
 function urlIs(string $value): bool
 {
     return $_SERVER['REQUEST_URI'] === $value;

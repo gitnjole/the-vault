@@ -40,5 +40,4 @@ $db->query('UPDATE vault SET sample = :sample WHERE id = :id', [
     'sample' => $_POST['sample']
 ]);
 
-header('Location: /samples');
-die();
+redirect('/samples');
