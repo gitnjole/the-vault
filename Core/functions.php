@@ -40,3 +40,8 @@ function urlIs(string $value): bool
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
+
+function old(string $key, string $default = '')
+{
+    return Core\Session::get('old')[$key] ?? $default;
+}

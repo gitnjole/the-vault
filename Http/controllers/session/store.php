@@ -23,5 +23,8 @@ if ($form->validate($credentials)) {
 }
 
 Session::flash('errors', $form->getErrors());
+Session::flash('old', [
+    'username' => $_POST['username'],
+]);
 
 return redirect('/login');
