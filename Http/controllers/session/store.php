@@ -24,4 +24,4 @@ if ($form->validate($credentials)) {
 
 Session::flash('errors', $form->getErrors());
 
-return redirect('/session');
+return redirect('/login');
