@@ -20,21 +20,21 @@
 /**
  * Navigation pages
  */
-$router->get('/', 'controllers/index.php');
-$router->get('/about', 'controllers/about.php');
-$router->get('/contact', 'controllers/contact.php');
-$router->get('/attributions', 'controllers/attributions.php');
+$router->get('/', 'index.php');
+$router->get('/about', 'about.php');
+$router->get('/contact', 'contact.php');
+$router->get('/attributions', 'attributions.php');
 
 /**
  * Sample pages
  */
-$router->get('/samples', 'controllers/samples/index.php');
-$router->get('/sample', 'controllers/samples/show.php');
-$router->get('/sample/edit', 'controllers/samples/edit.php')->access('auth');
-$router->patch('/sample', 'controllers/samples/update.php');
+$router->get('/samples', 'samples/index.php');
+$router->get('/sample', 'samples/show.php');
+$router->get('/sample/edit', 'samples/edit.php')->access('auth');
+$router->patch('/sample', 'samples/update.php');
 /**
  * Login
  */
-$router->get('/session', 'controllers/session/login.php')->access('guest');
-$router->post('/session', 'controllers/session/store.php')->access('guest');
-$router->delete('/session', 'controllers/session/destroy.php')->access('auth');
+$router->get('/session', 'session/login.php')->access('guest');
+$router->post('/session', 'session/store.php')->access('guest');
+$router->delete('/session', 'session/destroy.php')->access('auth');
