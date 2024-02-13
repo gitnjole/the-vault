@@ -30,7 +30,8 @@ $router->get('/attributions', 'controllers/attributions.php');
  */
 $router->get('/samples', 'controllers/samples/index.php');
 $router->get('/sample', 'controllers/samples/show.php');
-
+$router->get('/sample/edit', 'controllers/samples/edit.php');
+$router->patch('/sample', 'controllers/samples/update.php');
 /**
  * Login
  */

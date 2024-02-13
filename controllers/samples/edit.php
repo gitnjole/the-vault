@@ -16,7 +16,7 @@ $sample = $db->query(
 $user_id = 1;
 authorize($sample['user_id'] === $user_id);
 
-view('samples/show', [
-    'heading' => $sample['song_name'],
+view('samples/edit', [
+    'heading' => 'editing ' .$sample['song_name'],
     'sample' => $sample
 ]);
