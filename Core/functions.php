@@ -24,6 +24,17 @@ function login(array $user): void
         'username' => $user['username'],
         'user_id' => $user['user_id']
     ];
+
+    session_regenerate_id();
+}
+
+function logout(): void
+{
+    $_SESSION = [];
+    session_destroy();
+    
+    $params = session_get_cookie_params();
+    setcookie('PHPSESSID', '', time() - 3600);
 }
 
 function base_path(string $path): string
