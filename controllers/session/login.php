@@ -1,5 +1,5 @@
 <?php
 
-view('login/login', [
+view('session/login', [
     'heading' => 'Login'
 ]);
