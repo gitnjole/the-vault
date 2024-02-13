@@ -18,6 +18,14 @@ function authorize($condition, $status = Response::FORBIDDEN)
     }
 }
 
+function login(array $user): void
+{
+    $_SESSION['user'] = [
+        'username' => $user['username'],
+        'user_id' => $user['user_id']
+    ];
+}
+
 function base_path(string $path): string
 {
     return BASE_PATH . $path;
