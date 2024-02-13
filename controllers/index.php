@@ -1,5 +1,5 @@
 <?php
 
-view('contact.view.php', [
+view('index', [
     'heading' => 'Welcome to The Vault.'
 ]);

@@ -1,5 +1,5 @@
 <?php
 
-view('contact.view.php', [
+view('contact', [
     'heading' => 'Contact me!'
 ]);
