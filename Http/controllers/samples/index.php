@@ -6,7 +6,7 @@ use Core\Application;
 $db = Application::resolve(Database::class);
 
 $samples = $db->query(
-    "SELECT * FROM vault"
+    "SELECT * FROM samples"
 )->all();
 
 
