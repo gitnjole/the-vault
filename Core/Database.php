@@ -3,6 +3,7 @@
 namespace Core;
 
 use PDO;
+use PDOException;
 
 class Database
 {
@@ -23,14 +24,40 @@ class Database
     public function query(string $query, array $params = [])
     {
         $this->statement = $this->connection->prepare($query);
-        if (!empty($values)) {
-            foreach ($values as $key => $value) {
+        if (!empty($params)) {
+            foreach ($params as $key => $value) {
                 $this->statement->bindValue($key, $value);
             }
         }
         $this->statement->execute($params);
 
         return $this;
+    }
+
+    public function insert(array|string $query, array $params = [])
+    {
+        try {
+            $this->connection->beginTransaction();
+
+            $this->statement = $this->connection->prepare($query['samples']);
+            $this->statement->execute($params['samples']);
+
+            $lastInsertId = $this->connection->lastInsertId();
+
+            $this->statement = $this->connection->prepare($query['user_relations']);
+            $this->statement->execute(array_merge(
+                $params['user_submissions'],
+                ['sample_id' => $lastInsertId]
+            ));
+
+            $this->connection->commit();
+
+            return true;
+        } catch (PDOException $error) {
+            $this->connection->rollBack();
+            echo "Error: " . $error->getMessage();
+            return false;
+        }
     }
 
     public function one()
