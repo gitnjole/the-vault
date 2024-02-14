@@ -8,7 +8,10 @@ require base_path('views/elements/banner.php');
 <main>
 <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
   <section>
-    <?php //require 'views/elements/table.php'; ?>
+    <a href="/sample/create"> create a sample </a>
+  </section>
+  <section>
+    <?php //requir  e 'views/elements/table.php'; ?>
     <?php foreach ($samples as $sample) : ?>
       <li>
         <a href="/sample?id=<?= $sample['id'] ?>">
