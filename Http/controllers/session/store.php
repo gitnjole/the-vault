@@ -8,9 +8,9 @@ $form = LoginForm::validate($credentials = [
     'password'=> $_POST['password']
 ]);
 
-$signIn = (new Authenticator)->attempt($credentials);
+$auth = (new Authenticator)->attempt($credentials);
 
-if (! $signIn) {
+if (! $auth) {
     $form->addError('username', 'No matching username or password found.')
         ->throwException();
 }
