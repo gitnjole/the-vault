@@ -44,11 +44,11 @@
              * colour of background and text to the corresponding artist.
              */
             $imageLookup = [
-              'reprise' => 'views/images/reprise.png',
-              'drums' => 'views/images/drums.png',
-              'quote' => 'views/images/quote.png',
-              'sample' => 'views/images/sample.png',
-              'info' => 'views/images/view.png'
+              'reprise' => 'images/reprise.png',
+              'drums' => 'images/drums.png',
+              'quote' => 'images/quote.png',
+              'sample' => 'images/sample.png',
+              'info' => 'images/view.png'
             ];
           
             $artistLookup = [
@@ -61,15 +61,15 @@
           
             foreach ($samples as $row) {
               $bgImage = $imageLookup[$row['sample_type']];
-              $bgClass = $artistLookup[$row['artist']];
+              $bgClass = $artistLookup[$row['artist_name']];
           
               echo '<tr class="' . $bgClass . ' border-b">';
-              echo '<td '. $stylingClass .'>' . $row['artist'] . '</td>';
-              echo '<td '. $stylingClass .'>' . $row['song_title'] . '</td>';
+              echo '<td '. $stylingClass .'>' . $row['artist_name'] . '</td>';
+              echo '<td '. $stylingClass .'>' . $row['song_name'] . '</td>';
               echo '<td '. $stylingClass .'> <img src="'. $bgImage . '" width="24" height="24"></td>';
-              echo '<td '. $stylingClass .'>' . $row['sample_artist'] . '</td>';
-              echo '<td '. $stylingClass .'>' . $row['sample_title'] . '</td>';
-              echo '<td '. $stylingClass .'> <a href="#"><img src='. $imageLookup['info'] .' width="24" height="24" class="center"></a></td>';
+              echo '<td '. $stylingClass .'>' . $row['sampled_artist'] . '</td>';
+              echo '<td '. $stylingClass .'>' . $row['sampled_song'] . '</td>';
+              echo '<td ' . $stylingClass . '><a href="/sample?id=' . $row['sample_id'] . '"><img src="' . $imageLookup['info'] . '" width="24" height="24" class="center"></a></td>';
               echo '</tr>';
             }
 

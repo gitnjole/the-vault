@@ -11,14 +11,7 @@ require base_path('views/elements/banner.php');
     <a href="/sample/create"> create a sample </a>
   </section>
   <section>
-    <?php //requir  e 'views/elements/table.php'; ?>
-    <?php foreach ($samples as $sample) : ?>
-      <li>
-        <a href="/sample?id=<?= $sample['id'] ?>">
-            <?= $sample['song_name']. ' by ' .$sample['artist'] ?>
-        </a>
-      </li>
-    <?php endforeach; ?>
+    <?php require base_path('views/elements/table.php'); ?>
   </section>
 </div>
 </main>

@@ -14,12 +14,12 @@ require base_path('views/elements/banner.php');
     </p>
 
     <p>
-      <?= $sample['artist']. '<br>' .$sample['sample']. '<br>' .$sample['stamp'] ?>
+      <?= $sample['artist_name']. '<br>' .$sample['song_name'] ?>
     </p>
 
     <p>
       <a class="font-semibold leading-6 text-grey-600 hover:text-indigo-500"
-         href="/sample/edit?id=<?= $sample['id'] ?>"> Edit this sample</a>
+         href="/sample/edit?id=<?= $sample['sample_id'] ?>"> Edit this sample</a>
     </p>
   </section>
 </div>
