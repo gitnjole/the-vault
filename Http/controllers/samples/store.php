@@ -27,3 +27,5 @@ $query = [
 ];
 
 $result = $db->insert($query, $params);
+
+redirect('/samples');
