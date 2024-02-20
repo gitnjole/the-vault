@@ -1,5 +1,5 @@
 <?php
 
 view('about', [
-    'heading' => 'What is The Vault?'
+    'heading' => 'Inferno Records'
 ]);
