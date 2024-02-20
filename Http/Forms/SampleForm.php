@@ -6,8 +6,7 @@ class SampleForm
 {
     private string $field = '';
     private string $value = '';
-    private string $item = '';
-
+    
     public function createStatement(array $data): array
     {
         foreach ($data as $key => $value) {
