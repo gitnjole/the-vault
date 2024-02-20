@@ -27,5 +27,7 @@ Currently my bandcamp account is on a waitlist for approval of use of their API 
 - Dynamically fetch data from bandcamp to display newly released albums
 
 <p align="center">
+
 ![Alt text](web/images/samplePage.png "Sample view page")
+
 </p>
