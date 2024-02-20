@@ -28,6 +28,6 @@ Currently my bandcamp account is on a waitlist for approval of use of their API 
 
 <p align="center">
 
-![Alt text](web/images/samplePage.png "Sample view page")
+<img src="web/images/samplePage.png">
 
 </p>
