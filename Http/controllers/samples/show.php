@@ -1,24 +1,8 @@
 <?php
 
-use Core\Database;
-use Core\Application;
+use Models\Sample;
 
-$db = Application::resolve(Database::class);
-
-$sample = $db->query(
-    "SELECT 
-    s.*,
-    sl.sample_link,
-    sl.song_link
-    FROM 
-    samples s
-    LEFT JOIN 
-    sample_links sl ON s.sample_id = sl.sample_id
-    WHERE s.sample_id = :sample_id",
-    [
-        'sample_id' => $_GET['id']
-    ]
-)->findOrFail();
+$sample = (new Sample())->findOne();
 
 view('samples/show', [
     'sample' => $sample

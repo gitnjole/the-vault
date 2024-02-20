@@ -1,14 +1,8 @@
 <?php
 
-use Core\Database;
-use Core\Application;
+use Models\Sample;
 
-$db = Application::resolve(Database::class);
-
-$samples = $db->query(
-    "SELECT * FROM samples"
-)->all();
-
+$samples = (new Sample())->findAll();
 
 view('samples/samples', [
     'heading' => 'All samples',
