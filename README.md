@@ -37,3 +37,7 @@ You can read more on my personal website using this link: https://gitnjole.githu
 <img src="web/images/samplePage.png">
 
 </p>
+
+## Attributions
+
+This project has been directly inspired by [Du-Bruit](https://www.du-bruit.com/), so if you are interested in a community based sample database check them out.
